@@ -1,0 +1,68 @@
+//Create User API
+
+POST http://localhost:4000/userdetails
+Content-Type: application/json
+
+{
+  "id": 3,
+  "username": "john",
+  "email": "cde@gmail.com",
+  "password": "ABcd12*@",
+  "age": 30,
+  "gender": "male",
+  "company": "Xcelpro",
+  "designation": "Software Developer",
+  "about": "XcelPros delivers transformation through technology."
+}
+
+###
+
+// User Login API
+
+POST http://localhost:4000/login/
+Content-Type: application/json
+
+{
+  "username":"john",
+  "password":"ABcd12*@"
+}
+
+###
+
+// GET User API
+
+GET http://localhost:4000/userdetails
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im11cmlmb3Jlc3RlciIsImlhdCI6MTYyODk2MzI5Nn0.JIHF5xx-T9bsP3lyQlkauzvr-R6IM5o3WJoQ126Ykmo
+
+###
+
+// Update User API
+
+PUT http://localhost:4000/userdetails/1/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im11cmlmb3Jlc3RlciIsImlhdCI6MTYyODk2MzI5Nn0.JIHF5xx-T9bsP3lyQlkauzvr-R6IM5o3WJoQ126Ykmo
+Content-Type: application/json
+
+{
+  "username": "chris",
+  "email": "cde@gmail.com",
+  "password": "cdAB23*@",
+  "age": 30,
+  "gender": "male",
+  "company": "Xcelpro",
+  "designation": "Software Developer",
+  "about": "XcelPros delivers transformation through technology."
+}
+
+###
+
+// GET User by Id API
+
+GET http://localhost:4000/userdetails/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im11cmlmb3Jlc3RlciIsImlhdCI6MTYyODk2MzI5Nn0.JIHF5xx-T9bsP3lyQlkauzvr-R6IM5o3WJoQ126Ykmo
+###
+
+// DELETE User API
+
+DELETE http://localhost:4000/userdetails/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im11cmlmb3Jlc3RlciIsImlhdCI6MTYyODk2MzI5Nn0.JIHF5xx-T9bsP3lyQlkauzvr-R6IM5o3WJoQ126Ykmo
+###
